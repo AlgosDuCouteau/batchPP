@@ -1,0 +1,6 @@
+.venv
+datasets
+function/__pycache__
+imgs
+runs
+video
