@@ -19,9 +19,7 @@ out_count = 0
 
 counting_regions = [
     {
-        "name": "YOLOv8 Rectangle Region",
         "polygon": Polygon([(0, 250), (300, 250), (300, 640), (0, 640)]),  # Polygon points
-        "dragging": False,
         "region_color": (37, 255, 225),  # BGR Value
         "text_color": (0, 0, 0),  # Region Text Color
     },
@@ -35,11 +33,11 @@ def main():
     vid_frame_count = 0
 
     # Setup Model
-    model = YOLO('models/best_11m_640.engine')
+    model = YOLO('path-to-model/weights/best.pt')
 
 
     # Initialize video capture
-    vid_get = VideoGet('video\IMG_1155.MOV')
+    vid_get = VideoGet('path-to-video/video.mp4')
     vid_get.start()
     
     # Get video properties for output
